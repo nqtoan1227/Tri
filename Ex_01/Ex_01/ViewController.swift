@@ -20,6 +20,7 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
+        print("toi la tri")
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         data.count

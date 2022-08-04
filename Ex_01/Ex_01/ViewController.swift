@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
    
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var bntadd: UIButton!
     private var lastSelectedIndex: IndexPath?
     
     let data = ["ic_cocktail","ic_cup_coffee","ic_fish","ic_humberger","ic_small_bell"]
@@ -21,8 +22,12 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.contentInset.left = 24
-        print("toi la tri")
+        collectionView.contentInset.right = 24
+        SetupUIB()
         collectionView.register(UINib(nibName: "CategoryItemCell", bundle: nil), forCellWithReuseIdentifier: "CategoryItemCell")
+    }
+    func SetupUIB(){
+        bntadd.layer.cornerRadius = 28
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -44,11 +49,14 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
         }
         
         cell.selectedView.backgroundColor = .yellow
+        cell.itemContainerView.layer.borderColor = UIColor.green.cgColor
         
         if let lastSelectedIndex = lastSelectedIndex,
            lastSelectedIndex != indexPath,
            let lastCell = collectionView.cellForItem(at: lastSelectedIndex) as? CategoryItemCell  {
             lastCell.selectedView.backgroundColor = .white
+            lastCell.itemContainerView.layer.borderColor = UIColor.gray.cgColor
+            
         }
         
         self.lastSelectedIndex = indexPath

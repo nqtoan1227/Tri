@@ -33,7 +33,7 @@
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="05w-Kd-aLM">
                                                 <rect key="frame" x="0.0" y="50" width="414" height="100"/>
-                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="nSL-FT-lRf"/>
                                                 </constraints>
@@ -52,7 +52,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="208" height="300"/>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="e6A-gu-lIe" secondAttribute="bottom" id="FqB-ak-xlD"/>
                                                     <constraint firstAttribute="trailing" secondItem="e6A-gu-lIe" secondAttribute="trailing" id="Ulg-yr-QKc"/>
@@ -92,6 +92,9 @@
                                                                 <buttonConfiguration key="configuration" style="plain" title="+">
                                                                     <color key="baseForegroundColor" red="0.83256473580000001" green="1" blue="0.44387192819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="collectionPlus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xgW-ZH-nAQ"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJj-Yb-Naf">
                                                                 <rect key="frame" x="56" y="11" width="7.5" height="26"/>
@@ -108,6 +111,9 @@
                                                                 <buttonConfiguration key="configuration" style="plain" title="-">
                                                                     <color key="baseForegroundColor" systemColor="systemGreenColor"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="collecttionMinus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gtQ-iJ-lll"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="tintColor"/>
@@ -140,7 +146,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="unY-jC-QlB" firstAttribute="top" secondItem="u5v-02-e2S" secondAttribute="bottom" constant="2" id="1WM-LQ-cL7"/>
                                                     <constraint firstAttribute="bottom" secondItem="8gg-4d-415" secondAttribute="bottom" constant="16" id="5fs-OC-MpT"/>
@@ -171,6 +177,9 @@
                                                     <color key="baseForegroundColor" red="0.13086528629999999" green="0.16166292979999999" blue="0.44753273249999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="baseBackgroundColor" red="1" green="0.94338302969999999" blue="0.24104994739999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="collectionAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xqm-SD-9F6"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -215,8 +224,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="bntadd" destination="8JR-Qn-dBg" id="Dlh-57-5jB"/>
                         <outlet property="collectionView" destination="05w-Kd-aLM" id="I3x-h4-PpK"/>
+                        <outlet property="labelAmount" destination="QJj-Yb-Naf" id="8Jr-EZ-XAE"/>
+                        <outlet property="labelSumMoney" destination="mWv-2D-KeG" id="gGQ-k6-Q2t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -232,17 +242,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

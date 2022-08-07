@@ -10,12 +10,17 @@ import UIKit
 class ViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
    
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var bntadd: UIButton!
+    @IBOutlet weak var labelAmount: UILabel!
+    @IBOutlet weak var labelSumMoney: UILabel!
     private var lastSelectedIndex: IndexPath?
+    private var plusActive: IndexPath?
+
     
     let data = ["ic_cocktail","ic_cup_coffee","ic_fish","ic_humberger","ic_small_bell"]
     let insetsSession = UIEdgeInsets(top: 50, left: 20, bottom: 50, right: 20)
     let itemPerRow : CGFloat = 5.0
+    var amount : Int = 1
+    var cost : Float = 9.50
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +28,25 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
         collectionView.dataSource = self
         collectionView.contentInset.left = 24
         collectionView.contentInset.right = 24
-        SetupUIB()
         collectionView.register(UINib(nibName: "CategoryItemCell", bundle: nil), forCellWithReuseIdentifier: "CategoryItemCell")
+//        SetupUIB()
     }
-    func SetupUIB(){
-        bntadd.layer.cornerRadius = 28
+//    func SetupUIB(){
+//        .layer.cornerRadius = 28
+//    }
+    @IBAction func collectionPlus(_ sender: UIButton) {
+        if  let collectionPlus1 =  collectionPlus, collectionPlus1 = IndexPath {
+            amount = amount + 1
+            labelSumMoney.text = amount * cost
+        }
+        labelSumMoney.text = cost
+    }
+    
+    @IBAction func collecttionMinus(_ sender: UIButton) {
+        
+    }
+    @IBAction func collectionAdd(_ sender: UIButton) {
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

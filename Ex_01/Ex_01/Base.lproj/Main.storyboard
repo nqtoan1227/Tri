@@ -82,15 +82,15 @@
                                                         <color key="textColor" red="0.71399735909999995" green="0.71399735909999995" blue="0.71399735909999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8uY-uY-ENV">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8uY-uY-ENV" customClass="ButtonSetup" customModule="Ex_01" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="88" width="144" height="54"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ae-XD-mUP">
                                                                 <rect key="frame" x="18" y="8" width="33" height="31"/>
-                                                                <color key="backgroundColor" red="1" green="0.90396496500000001" blue="0.066582739759999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="+">
-                                                                    <color key="baseForegroundColor" red="0.83256473580000001" green="1" blue="0.44387192819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="collectionPlus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xgW-ZH-nAQ"/>
@@ -99,25 +99,25 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJj-Yb-Naf">
                                                                 <rect key="frame" x="56" y="11" width="7.5" height="26"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" red="0.83256473580000001" green="1" blue="0.44387192819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <color key="shadowColor" red="0.29428174330000001" green="0.53399429350000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZkN-Ir-Hfl">
                                                                 <rect key="frame" x="71.5" y="9" width="30.5" height="31"/>
-                                                                <color key="backgroundColor" red="1" green="0.90396496500000001" blue="0.066582739759999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="tintColor" red="0.83256473580000001" green="1" blue="0.44387192819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="-">
-                                                                    <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="collecttionMinus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gtQ-iJ-lll"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="tintColor"/>
-                                                        <color key="tintColor" systemColor="linkColor"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="bottom" secondItem="QJj-Yb-Naf" secondAttribute="bottom" constant="17" id="1YI-H5-iKT"/>
                                                             <constraint firstItem="3Ae-XD-mUP" firstAttribute="top" secondItem="8uY-uY-ENV" secondAttribute="top" constant="8" id="2aS-Fd-HSi"/>
@@ -185,6 +185,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="05w-Kd-aLM" firstAttribute="leading" secondItem="5d2-b7-Zno" secondAttribute="leading" id="6Az-yP-KoK"/>
+                                            <constraint firstAttribute="bottom" secondItem="8JR-Qn-dBg" secondAttribute="bottom" constant="102" id="9dF-Xp-NtV"/>
                                             <constraint firstItem="05w-Kd-aLM" firstAttribute="top" secondItem="5d2-b7-Zno" secondAttribute="top" constant="50" id="KUz-xb-RRa"/>
                                             <constraint firstItem="2K8-Xu-Z3H" firstAttribute="leading" secondItem="5d2-b7-Zno" secondAttribute="leading" constant="103" id="NPm-Gb-Q4b"/>
                                             <constraint firstItem="2K8-Xu-Z3H" firstAttribute="top" secondItem="05w-Kd-aLM" secondAttribute="bottom" constant="32" id="QUu-Tu-LSB"/>
@@ -224,6 +225,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addNew" destination="8JR-Qn-dBg" id="wSL-mD-duC"/>
                         <outlet property="collectionView" destination="05w-Kd-aLM" id="I3x-h4-PpK"/>
                         <outlet property="labelAmount" destination="QJj-Yb-Naf" id="8Jr-EZ-XAE"/>
                         <outlet property="labelSumMoney" destination="mWv-2D-KeG" id="gGQ-k6-Q2t"/>
@@ -236,17 +238,11 @@
     </scenes>
     <resources>
         <image name="slider-img 1" width="208" height="300"/>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

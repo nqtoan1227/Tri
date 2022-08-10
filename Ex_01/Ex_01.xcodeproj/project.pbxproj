@@ -16,6 +16,7 @@
 		84DF7E5B2898D00800D15579 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DF7E5A2898D00800D15579 /* Assets.xcassets */; };
 		84DF7E5E2898D00800D15579 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DF7E5C2898D00800D15579 /* LaunchScreen.storyboard */; };
 		84DF7E662898DB8500D15579 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DF7E652898DB8500D15579 /* CollectionViewCell.swift */; };
+		84F22E9528A26973002E5045 /* ButtonSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F22E9428A26973002E5045 /* ButtonSetup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		84DF7E5D2898D00800D15579 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84DF7E5F2898D00800D15579 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84DF7E652898DB8500D15579 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		84F22E9428A26973002E5045 /* ButtonSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSetup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				84DF7E5C2898D00800D15579 /* LaunchScreen.storyboard */,
 				84DF7E5F2898D00800D15579 /* Info.plist */,
 				84DF7E652898DB8500D15579 /* CollectionViewCell.swift */,
+				84F22E9428A26973002E5045 /* ButtonSetup.swift */,
 			);
 			path = Ex_01;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				84DF7E522898D00600D15579 /* AppDelegate.swift in Sources */,
 				84DF7E662898DB8500D15579 /* CollectionViewCell.swift in Sources */,
 				84DF7E542898D00600D15579 /* SceneDelegate.swift in Sources */,
+				84F22E9528A26973002E5045 /* ButtonSetup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

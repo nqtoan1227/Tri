@@ -10,8 +10,10 @@ import UIKit
 class ViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
    
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet var viewAmount: [UIView]!
     @IBOutlet weak var labelAmount: UILabel!
     @IBOutlet weak var labelSumMoney: UILabel!
+    @IBOutlet weak var addNew: UIButton!
     private var lastSelectedIndex: IndexPath?
     private var plusActive: IndexPath?
 
@@ -26,21 +28,20 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
+        addNew.layer.cornerRadius = 30
+        addNew.clipsToBounds = true
         collectionView.contentInset.left = 24
         collectionView.contentInset.right = 24
         collectionView.register(UINib(nibName: "CategoryItemCell", bundle: nil), forCellWithReuseIdentifier: "CategoryItemCell")
-//        SetupUIB()
+        
     }
-//    func SetupUIB(){
-//        .layer.cornerRadius = 28
+//    @IBAction func collectionPlus(_ sender: UIButton) {
+//        if  let collectionPlus1 =  collectionPlus, collectionPlus1 = IndexPath {
+//            amount = amount + 1
+//            labelSumMoney.text = amount * cost
+//        }
+//        labelSumMoney.text = cost
 //    }
-    @IBAction func collectionPlus(_ sender: UIButton) {
-        if  let collectionPlus1 =  collectionPlus, collectionPlus1 = IndexPath {
-            amount = amount + 1
-            labelSumMoney.text = amount * cost
-        }
-        labelSumMoney.text = cost
-    }
     
     @IBAction func collecttionMinus(_ sender: UIButton) {
         

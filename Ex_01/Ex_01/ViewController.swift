@@ -15,6 +15,10 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
     @IBOutlet weak var labelSumMoney: UILabel!
     @IBOutlet weak var addNew: UIButton!
     private var lastSelectedIndex: IndexPath?
+    @IBOutlet weak var cardView: UIView!
+    
+    @IBOutlet weak var ic_hambeger: UIImageView!
+    @IBOutlet weak var ic_hambeger1: UIImageView!
     private var plusActive: IndexPath?
 
     
@@ -29,7 +33,12 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
         collectionView.delegate = self
         collectionView.dataSource = self
         addNew.layer.cornerRadius = 30
+        ic_hambeger.layer.borderWidth = 1.0
+        ic_hambeger.layer.borderColor = UIColor.gray.cgColor
+//        ic_hambeger.layer.backgroundColor = CGColor
+        ic_hambeger.clipsToBounds = true
         addNew.clipsToBounds = true
+//        cardView.layer.cornerRadius.round
         collectionView.contentInset.left = 24
         collectionView.contentInset.right = 24
         collectionView.register(UINib(nibName: "CategoryItemCell", bundle: nil), forCellWithReuseIdentifier: "CategoryItemCell")

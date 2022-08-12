@@ -61,4 +61,17 @@ func bai5(){
     }
     print("tong la:",sum)
 }
-bai5()
+//bai5()
+func bai6(){
+    let n = 10
+    var sum : Float
+    var i = 1
+    sum = 0
+    while(i < n){
+        sum = sum + 1.0 / Float(i * ( i + 1))
+        i += 1
+    }
+    print("tong la:",sum)
+}
+bai6()
+

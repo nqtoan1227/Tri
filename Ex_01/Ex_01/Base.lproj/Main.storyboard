@@ -16,15 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GER-qu-Qiv">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <items>
-                                    <navigationItem id="Pm9-lO-uHA">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="hnn-uN-5w1"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="y1h-Th-vye"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W2Q-wX-2pH">
+                                <rect key="frame" x="0.0" y="768" width="414" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Wgo-Qa-xJf"/>
+                                </constraints>
+                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RU9-18-FAH">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
@@ -153,7 +151,6 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9.50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWv-2D-KeG">
                                                         <rect key="frame" x="269" y="101" width="47" height="24"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="47" id="LZP-sn-2Na"/>
                                                             <constraint firstAttribute="height" constant="24" id="c99-zz-nOk"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
@@ -199,7 +196,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQn-T9-cdE">
                                                 <rect key="frame" x="0.0" y="736" width="414" height="90"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSz-zi-1No" customClass="ButtonSetup" customModule="Ex_01" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSz-zi-1No">
                                                         <rect key="frame" x="260" y="22" width="100" height="46"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="100" id="1ZV-Jr-G8g"/>
@@ -275,20 +272,21 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="GER-qu-Qiv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GY5-gT-ckW"/>
                             <constraint firstItem="RU9-18-FAH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PTe-Zg-RNF"/>
+                            <constraint firstItem="W2Q-wX-2pH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RfD-TJ-0GU"/>
                             <constraint firstItem="RU9-18-FAH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RuT-ib-Il6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RU9-18-FAH" secondAttribute="bottom" id="SoU-kA-7O3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RU9-18-FAH" secondAttribute="trailing" id="T9T-50-Plx"/>
-                            <constraint firstItem="GER-qu-Qiv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WDy-JY-jm1"/>
-                            <constraint firstItem="GER-qu-Qiv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="frY-tz-5lI"/>
+                            <constraint firstAttribute="bottom" secondItem="W2Q-wX-2pH" secondAttribute="bottom" id="TEc-wT-fXd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W2Q-wX-2pH" secondAttribute="trailing" id="kDu-uJ-Mz5"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addNew" destination="8JR-Qn-dBg" id="wSL-mD-duC"/>
                         <outlet property="cardView" destination="fQn-T9-cdE" id="sd3-r5-suc"/>
+                        <outlet property="cartButton" destination="dSz-zi-1No" id="mA7-n5-DZI"/>
                         <outlet property="collectionView" destination="05w-Kd-aLM" id="I3x-h4-PpK"/>
                         <outlet property="ic_hambeger" destination="qYN-sr-VxM" id="CcM-cK-BMw"/>
                         <outlet property="ic_hambeger1" destination="MOy-er-MRU" id="SmO-58-lsN"/>

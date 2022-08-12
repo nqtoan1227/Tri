@@ -21,39 +21,54 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
     @IBOutlet weak var ic_hambeger1: UIImageView!
     private var plusActive: IndexPath?
 
+    @IBOutlet weak var cartButton: UIButton!
     
     let data = ["ic_cocktail","ic_cup_coffee","ic_fish","ic_humberger","ic_small_bell"]
     let insetsSession = UIEdgeInsets(top: 50, left: 20, bottom: 50, right: 20)
     let itemPerRow : CGFloat = 5.0
-    var amount : Int = 1
-    var cost : Float = 9.50
+    var cost : Double = 9.50
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
         addNew.layer.cornerRadius = 30
+        cartButton.layer.cornerRadius = 23
         ic_hambeger.layer.borderWidth = 1.0
         ic_hambeger.layer.borderColor = UIColor.gray.cgColor
 //        ic_hambeger.layer.backgroundColor = CGColor
         ic_hambeger.clipsToBounds = true
         addNew.clipsToBounds = true
-//        cardView.layer.cornerRadius.round
+        cartButton.clipsToBounds = true
+        cardView.layer.cornerRadius = 45
+        cardView.layer.maskedCorners = [.layerMinXMinYCorner]
         collectionView.contentInset.left = 24
         collectionView.contentInset.right = 24
         collectionView.register(UINib(nibName: "CategoryItemCell", bundle: nil), forCellWithReuseIdentifier: "CategoryItemCell")
         
     }
-//    @IBAction func collectionPlus(_ sender: UIButton) {
-//        if  let collectionPlus1 =  collectionPlus, collectionPlus1 = IndexPath {
-//            amount = amount + 1
-//            labelSumMoney.text = amount * cost
-//        }
-//        labelSumMoney.text = cost
-//    }
+    
+    @IBAction func collectionPlus(_ sender: UIButton) {
+        // b1: tang so luong
+        if let amount = labelAmount.text , let inamount = Int(amount){
+            labelAmount.text = "\(inamount + 1)"
+            print("so luong: ", amount)
+            if let newAmount = Double(labelAmount.text ?? "") {
+                labelSumMoney.text = String(format: "%.2f", newAmount  * cost)
+            }
+        }
+        // b2: tinh tien
+        
+    }
     
     @IBAction func collecttionMinus(_ sender: UIButton) {
-        
+        if let amount = labelAmount.text , let inamount = Int(amount) , inamount > 0{
+            labelAmount.text = "\(inamount - 1)"
+            print("so luong: ", amount)
+            if let newAmount = Double(labelAmount.text ?? "") {
+                labelSumMoney.text = String(format: "%.2f", newAmount  * cost)
+            }
+        }
     }
     @IBAction func collectionAdd(_ sender: UIButton) {
         

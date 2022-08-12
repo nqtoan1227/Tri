@@ -17,7 +17,7 @@ class ButtonSetup: UIButton {
         setRadius()
     }
     func setRadius(){
-       layer.cornerRadius = 25
+       layer.cornerRadius = 30
        layer.borderWidth = 2
        layer.borderColor = UIColor.gray.cgColor
        clipsToBounds = true

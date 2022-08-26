@@ -7,8 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
-   
+class ViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UITableViewDelegate,UITableViewDataSource {
+    //tableviewcell 1
+    @IBOutlet weak var table: UITableView!
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet var viewAmount: [UIView]!
     @IBOutlet weak var labelAmount: UILabel!
@@ -27,6 +29,7 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
     let insetsSession = UIEdgeInsets(top: 50, left: 20, bottom: 50, right: 20)
     let itemPerRow : CGFloat = 5.0
     var cost : Double = 9.50
+    var models = [Model]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +49,27 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
         collectionView.contentInset.right = 24
         collectionView.register(UINib(nibName: "CategoryItemCell", bundle: nil), forCellWithReuseIdentifier: "CategoryItemCell")
         
+        table.register(UINib(nibName: "TableViewCell1", bundle: nil), forCellReuseIdentifier: "TableViewCell1")
+        table.delegate = self
+        table.dataSource = self
     }
+    
+    // table view cell
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return models.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = table.dequeueReusableCell(withIdentifier: "TableViewCell1" , for: indexPath)
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90.0
+    }
+    
+    
+    
     
     @IBAction func collectionPlus(_ sender: UIButton) {
         // b1: tang so luong
@@ -104,5 +127,14 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
         }
         
         self.lastSelectedIndex = indexPath
+    }
+    struct Model {
+        let text : String
+        let image : String
+        
+        init(text: String , image : String){
+            self.text = text
+            self.image = image
+        }
     }
 }

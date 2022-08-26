@@ -1,4 +1,5 @@
 import Cocoa
+import Foundation
 
 var greeting = "Hello, playground"
 
@@ -218,3 +219,17 @@ bai16()
 //    print("Tong la ",S)
 //}
 //bai17()
+
+//Bài 20: Liệt kê tất cả các “ước số” của số nguyên dương n
+func bai20(){
+//    var output : CInt = 0
+//    getInput(&output)
+//    println(output)
+    let input = readLine()
+    var i = 0
+    while i < input {
+        
+    }
+    
+}
+bai20()
